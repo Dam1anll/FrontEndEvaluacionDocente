@@ -18,24 +18,24 @@ export class AuthGuard implements CanActivate {
   ) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | Observable<boolean> {
-    if (!this.auth.is_login) {
-      this.router.navigate(['login'], { queryParams: { returnUrl: state.url } });
-      return false;
-    }
+    // if (!this.auth.is_login) {
+    //   this.router.navigate(['login'], { queryParams: { returnUrl: state.url } });
+    //   return false;
+    // }
 
-    const requiredRoles = route.data['roles'] as string[];
-    const userRole = this.auth.getUserRole({ access_token: this.auth.getAccessToken() });
+    // const requiredRoles = route.data['roles'] as string[];
+    // const userRole = this.auth.getUserRole({ access_token: this.auth.getAccessToken() });
 
-    if (userRole === 'TEACHER' && state.url === '/dashboard') {
-      this.router.navigate(['/component/attendance']);
-      return false;
-    }
+    // if (userRole === 'TEACHER' && state.url === '/dashboard') {
+    //   this.router.navigate(['/component/attendance']);
+    //   return false;
+    // }
 
-    if (!userRole || (requiredRoles && !requiredRoles.includes(userRole))) {
-      this.message.add({ severity: 'error', summary: 'Error', detail: 'No tienes permisos para acceder a esta página' });
-      this.router.navigateByUrl('/dashboard');
-      return false;
-    }
+    // if (!userRole || (requiredRoles && !requiredRoles.includes(userRole))) {
+    //   this.message.add({ severity: 'error', summary: 'Error', detail: 'No tienes permisos para acceder a esta página' });
+    //   this.router.navigateByUrl('/dashboard');
+    //   return false;
+    // }
 
     return true;
   }

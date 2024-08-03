@@ -5,7 +5,7 @@ export const ROUTES: RouteInfo[] = [
     path: '/dashboard',
     title: 'Panel de control',
     icon: 'bi bi-speedometer2',
-    role: ['ADMIN'],
+    // role: ['ADMIN'],
     class: '',
     extralink: false,
     submenu: []
@@ -14,7 +14,52 @@ export const ROUTES: RouteInfo[] = [
     path: '/component/users',
     title: 'Usuarios',
     icon: 'bi bi-person',
-    role: ['ADMIN'],
+    // role: ['ADMIN'],
+    class: '',
+    extralink: false,
+    submenu: []
+  },
+  {
+    path: '/component/inicio',
+    title: 'Inicio',
+    icon: 'bi bi-house',
+    // role: ['ADMIN'],
+    class: '',
+    extralink: false,
+    submenu: []
+  },
+  {
+    path: '/component/estatus',
+    title: 'Estatus',
+    icon: 'bi bi-activity',
+    // role: ['ADMIN'],
+    class: '',
+    extralink: false,
+    submenu: []
+  },
+  {
+    path: '/component/resultados',
+    title: 'Resultados',
+    icon: 'bi bi-bar-chart',
+    // role: ['ADMIN'],
+    class: '',
+    extralink: false,
+    submenu: []
+  },
+  {
+    path: '/component/gestion',
+    title: 'Gestion',
+    icon: 'bi bi-folder-plus',
+    // role: ['ADMIN'],
+    class: '',
+    extralink: false,
+    submenu: []
+  },
+  {
+    path: '/component/claves',
+    title: 'Claves',
+    icon: 'bi bi-archive',
+    // role: ['ADMIN'],
     class: '',
     extralink: false,
     submenu: []

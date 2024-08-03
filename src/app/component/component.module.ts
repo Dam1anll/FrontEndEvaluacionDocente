@@ -7,6 +7,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ComponentsRoutes } from './component.routing';
 
 import { UsersComponent } from './users/users.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { EstatusComponent } from './estatus/estatus.component';
+import { ResultadosComponent } from './resultados/resultados.component';
+import { GestionComponent } from './gestion/gestion.component';
+import { ClavesComponent } from './claves/claves.component';
 
 // PrimeNG
 import { DialogModule } from 'primeng/dialog';
@@ -40,7 +45,12 @@ import { MessagesModule } from 'primeng/messages';
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
-    UsersComponent
+    UsersComponent,
+    InicioComponent,
+    EstatusComponent,
+    ResultadosComponent,
+    GestionComponent,
+    ClavesComponent,
   ]
 })
 export class ComponentsModule { }
