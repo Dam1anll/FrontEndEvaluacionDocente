@@ -11,28 +11,28 @@ export const topcards: topcard[] = [
         bgcolor: 'success',
         icon: 'bi bi-people',
         title: '4',
-        subtitle: 'Docentes',
-        href: '/component/operators'
+        subtitle: 'Grupos',
+        href: '/component/estatus'
     },
     {
         bgcolor: 'primary',
         icon: 'bi bi-person',
         title: '83 %',
-        subtitle: 'Rendimiento docentes',
-        href: '/component/users'
+        subtitle: 'Resultados',
+        href: '/component/resultados'
     },
     {
         bgcolor: 'warning',
         icon: 'bi bi-thermometer-half',
         title: '2',
-        subtitle: 'Inasistencias',
-        href: '/component/incubators'
+        subtitle: 'Gestion',
+        href: '/component/gestion'
     },
     {
         bgcolor: 'info',
         icon: 'bi bi-bell-fill',
         title: '104',
-        subtitle: 'Alertas emitidas',
-        href: '/component/monitoring'
+        subtitle: 'Claves',
+        href: '/component/claves'
     }
 ] 

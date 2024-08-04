@@ -10,24 +10,24 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     submenu: []
   },
-  {
-    path: '/component/users',
-    title: 'Usuarios',
-    icon: 'bi bi-person',
-    // role: ['ADMIN'],
-    class: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/component/inicio',
-    title: 'Inicio',
-    icon: 'bi bi-house',
-    // role: ['ADMIN'],
-    class: '',
-    extralink: false,
-    submenu: []
-  },
+  // {
+  //   path: '/component/users',
+  //   title: 'Usuarios',
+  //   icon: 'bi bi-person',
+  //   // role: ['ADMIN'],
+  //   class: '',
+  //   extralink: false,
+  //   submenu: []
+  // },
+  // {
+  //   path: '/component/inicio',
+  //   title: 'Inicio',
+  //   icon: 'bi bi-house',
+  //   // role: ['ADMIN'],
+  //   class: '',
+  //   extralink: false,
+  //   submenu: []
+  // },
   {
     path: '/component/estatus',
     title: 'Estatus',
