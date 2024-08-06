@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-gestion',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './gestion.component.scss'
 })
 export class GestionComponent {
+  date: Date;
 
+  constructor() {
+    this.date = new Date(); // Inicializa la fecha con la fecha actual
+  }
 }

@@ -25,6 +25,10 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 // PrimeNG
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button'; 
+
 
 @NgModule({
   declarations: [
@@ -48,6 +52,9 @@ import { ToastModule } from 'primeng/toast';
     SidebarComponent,
     FormsModule,
     FullCalendarModule,
+    InputNumberModule,
+    CardModule,
+    ButtonModule,
     ToastModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),

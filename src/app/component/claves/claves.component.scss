@@ -1,0 +1,58 @@
+h3{
+    text-align: center;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.subtitulo{
+    text-align: center;
+    font-size: 15px;
+}
+
+p{
+    text-align: center;
+}
+
+button {
+    margin-bottom: 30px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card-item {
+    margin: 10px;
+}
+
+.btn-descargar{
+    background-color: #FF6624;
+    color: #fff;
+}
+
+.btn-compartir{
+    background-color: #0C59CF;
+    color: #fff;
+}
+
+.btn-actualizar{
+    background-color: #FEC63D;
+    color: #fff;
+}
+
+.btn-procesos{
+    background-color: gray;
+    color: #fff;
+}
+
+#carreras{
+    background-color: #705CEE;
+    color: #fff;
+    height: 40px;
+}
+

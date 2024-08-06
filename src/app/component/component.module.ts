@@ -23,6 +23,7 @@ import { DividerModule } from 'primeng/divider';
 import { AccordionModule } from 'primeng/accordion'
 import { SelectButtonModule } from 'primeng/selectbutton'
 import { MessagesModule } from 'primeng/messages';
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
   imports: [
@@ -41,7 +42,8 @@ import { MessagesModule } from 'primeng/messages';
     DropdownModule,
     AccordionModule,
     SelectButtonModule,
-    MessagesModule
+    MessagesModule,
+    CalendarModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [

@@ -10,28 +10,28 @@ export const topcards: topcard[] = [
     {
         bgcolor: 'success',
         icon: 'bi bi-people',
-        title: '4',
+        title: 'Estatus',
         subtitle: 'Grupos',
         href: '/component/estatus'
     },
     {
         bgcolor: 'primary',
         icon: 'bi bi-person',
-        title: '83 %',
+        title: 'Resultados',
         subtitle: 'Resultados',
         href: '/component/resultados'
     },
     {
         bgcolor: 'warning',
         icon: 'bi bi-thermometer-half',
-        title: '2',
+        title: 'Gestion',
         subtitle: 'Gestion',
         href: '/component/gestion'
     },
     {
         bgcolor: 'info',
         icon: 'bi bi-bell-fill',
-        title: '104',
+        title: 'Claves',
         subtitle: 'Claves',
         href: '/component/claves'
     }

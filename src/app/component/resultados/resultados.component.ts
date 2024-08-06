@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { topcardsresultados, topcard } from './resultados-cards-data';
 
 @Component({
   selector: 'app-resultados',
@@ -6,6 +7,16 @@ import { Component } from '@angular/core';
   templateUrl: './resultados.component.html',
   styleUrl: './resultados.component.scss'
 })
-export class ResultadosComponent {
+export class ResultadosComponent implements OnInit {
+    
+  topcards:topcard[];
+
+  constructor() { 
+
+    this.topcards=topcardsresultados;
+  }
+
+  ngOnInit(): void {
+  }
 
 }
