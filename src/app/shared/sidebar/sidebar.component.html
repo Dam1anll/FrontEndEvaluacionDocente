@@ -8,7 +8,7 @@
   </head>
   <body>
     <nav class="sidebar-nav">
-      <ul id="sidebarnav" class="p-3 menuleft sidebar-content">
+      <ul id="sidebarnav" class="p-1 menuleft sidebar-content">
         <hr>
         <li class="sidebar-item" *ngFor="let sidebarnavItem of sidebarnavItems" [class.active]="showMenu === sidebarnavItem.title || isSubmenuActive(sidebarnavItem)">
           <div class="nav-small-cap" *ngIf="sidebarnavItem.extralink === true && sidebarnavItem.role">{{sidebarnavItem.title}}</div>

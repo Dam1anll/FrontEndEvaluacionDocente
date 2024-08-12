@@ -31,56 +31,52 @@
                 <!-- Card with Process Details -->
                 <div class="card mt-0">
                     <div class="card-body">
-                        <h4 class="card-title">Detalles del Proceso</h4>
+                        <h4 class="card-title">Gestion de Procesos</h4>
                         <hr>
-                        <form class="mb-3 mt-3">
-                            <div class="row">
-                                <!-- Calendar Input -->
-                                <div class="col-md-6 form-group">
-                                    <label for="calendar">Duración del Proceso:</label>
-                                    <p-calendar
-                                        [(ngModel)]="date"
-                                        [showIcon]="true"
-                                        [inline]="true"
-                                        inputId="calendar"
-                                        selectionMode="range"
-                                        [showButtonBar]="true"
-                                        class="calendario max-w-full">
-                                    </p-calendar>
-                                </div>
-
-                                <!-- Text Inputs -->
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="process-name">Nombre del Proceso:</label>
-                                        <input
-                                            type="text"
-                                            id="process-name"
-                                            placeholder="Oficial ## 20##"
-                                            class="form-control ng-untouched ng-pristine ng-valid"
-                                        />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="period">Periodo:</label>
-                                        <input
-                                            type="text"
-                                            id="period"
-                                            placeholder="Agosto - Diciembre"
-                                            readonly
-                                            class="form-control ng-untouched ng-pristine ng-valid"
-                                        />
+                        <div class="mb-3 mt-3">
+                            <div class="d-flex flex-wrap mb-3 mt-3">
+                                <input type="text" placeholder="Buscar..." class="form-control w-100 w-md-25 mb-2 mb-md-0">
+                                <button class="btn btn-crear ml-auto mb-2 mb-md-0" (click)="showDialog()">
+                                    <i class="bi bi-check-circle-fill"></i> Crear Proceso
+                                </button>
+                                <button class="btn btn-eliminar ml-3 mb-2 mb-md-0">
+                                    <i class="bi bi-trash-fill"></i> Eliminar Proceso/s
+                                </button>
+                            </div>
+                            <div class="container mt-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <!-- Simulated List -->
+                                        <div class="list-group">
+                                            <div class="list-group-item d-flex justify-content-between align-items-center" (click)="onItemClick('Oficial 30 2024')">
+                                                <label>Oficial 30 2024</label>
+                                                <i class="fas fa-chevron-right"></i>
+                                            </div>
+                                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                                <label>Oficial 31 2024</label>
+                                                <i class="fas fa-chevron-right"></i>
+                                            </div>
+                                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                                <label>Oficial 32 2024</label>
+                                                <i class="fas fa-chevron-right"></i>
+                                            </div>
+                                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                                <label>Oficial 33 2024</label>
+                                                <i class="fas fa-chevron-right"></i>
+                                            </div>
+                                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                                <label>Oficial 34 2024</label>
+                                                <i class="fas fa-chevron-right"></i>
+                                            </div>
+                                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                                <label>Oficial 35 2024</label>
+                                                <i class="fas fa-chevron-right"></i>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Action Buttons -->
-                            <div class="d-flex justify-content-end mt-3">
-                                <button class="btn btn-crear ms-2">Crear</button>
-                                <button class="btn btn-guardar ms-2">Guardar</button>
-                                <button class="btn btn-eliminar ms-2">Eliminar</button>
-                                <button class="btn btn-editar ms-2">Editar</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,3 +84,73 @@
     </div>
 </body>
 </html>
+
+<!-- Modal Crear Proceso -->
+<div [ngClass]="{'modal-blur': isModalOpen}">
+    <p-toast position="top-center"></p-toast>
+    <p-dialog header="Crear Proceso" [(visible)]="visible" [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '25vw' }" [draggable]="false" [resizable]="false" (onHide)="hideDialog()">
+        <form [formGroup]="form" (ngSubmit)="createProcess()">
+            <div class="form-group">
+                <label for="nombreProceso" class="col-lg-4 col-form-label fw-bold fs-3">Nombre del Proceso <i class="text-danger">*</i></label>
+                <input type="text" class="form-control" formControlName="nombreProceso" id="nombreProceso" />
+            </div>
+            <div class="form-group">
+                <label for="fechaInicial" class="col-lg-4 col-form-label fw-bold fs-3">Fecha Inicial <i class="text-danger">*</i></label>
+                <input type="date" class="form-control" formControlName="fechaInicial" id="fechaInicial" (change)="calculatePeriod()" />
+            </div>
+            <div class="form-group">
+                <label for="fechaFinal" class="col-lg-4 col-form-label fw-bold fs-3">Fecha Final <i class="text-danger">*</i></label>
+                <input type="date" class="form-control" formControlName="fechaFinal" id="fechaFinal" />
+            </div>
+            <div class="form-group">
+                <label for="periodo" class="col-lg-4 col-form-label fw-bold fs-3">Periodo</label>
+                <input type="text" class="form-control" formControlName="periodo" id="periodo" readonly />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Crear</button>
+            </div>
+        </form>
+    </p-dialog>
+</div>
+
+
+
+<!-- <div class="col-md-6 form-group">
+    <label for="calendar">Fecha Inicial:</label>
+    <input
+        type="date"
+        [(ngModel)]="date"
+        id="calendar"
+        class="form-control calendario max-w-full"
+    />
+</div>
+
+<div class="col-md-6 form-group">
+    <label for="calendar">Fecha Final:</label>
+    <input
+        type="date"
+        [(ngModel)]="date"
+        id="calendar"
+        class="form-control calendario max-w-full"
+    />
+</div>
+
+<div class="col-md-6 form-group">
+    <label for="process-name">Nombre del Proceso:</label>
+    <input
+        type="text"
+        id="process-name"
+        placeholder="Oficial ## 20##"
+        class="form-control ng-untouched ng-pristine ng-valid"
+    />
+</div>
+<div class="col-md-6 form-group">
+    <label for="period">Periodo:</label>
+    <input
+        type="text"
+        id="period"
+        placeholder="Agosto - Diciembre"
+        readonly
+        class="form-control ng-untouched ng-pristine ng-valid"
+    />
+</div> -->

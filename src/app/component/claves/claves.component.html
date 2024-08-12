@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="row mt-3">
+        <div class="row mb-0 mt-2">
             <div class="col-12">
                 <div class="page-breadcrumb">
                     <div class="d-md-flex align-items-center">
@@ -42,14 +42,14 @@
                     <button class="btn btn-actualizar ml-3 mb-2 mb-md-0">
                         <i class="fas fa-sync-alt"></i> Actualizar
                     </button>
-                    <button class="btn btn-procesos ml-3 mb-2 mb-md-0">
+                    <button class="btn btn-procesos ml-3 mb-2 mb-md-0"  (click)="showDialogProcesos()">
                         <i class="fas fa-cogs"></i> Procesos
                     </button>
-                    <button class="btn btn-carrera ml-3 mb-2 mb-md-0">
+                    <button class="btn btn-carrera ml-3 mb-2 mb-md-0" (click)="showDialog()">
                         <i class="fas fa-flag-checkered"></i> Carrera
                     </button>
                 </div>
-                
+             
                 <div class="row cards-container">
                     <div class="col-md-6 col-lg-3 card-item" *ngFor='let topcard of topcards'>
                         <div class="card shadow">
@@ -58,7 +58,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="align-items-center">
-                                    <div class="ml-3">
+                                    <div class="ml-0">
                                         <h4 class="subtitulo font-weight-bold">{{topcard.subtitle}}</h4>
                                         <p class="text-muted fs-3">{{topcard.header}}</p>
                                     </div>
@@ -80,3 +80,65 @@
     </div>
 </body>
 </html>
+
+        <!-- Modal Carrera -->
+        <div [ngClass]="{'modal-blur': isModalOpen}">
+            <p-toast position="top-center"></p-toast>
+            <p-dialog [header]="isEditMode ? 'Editar clave' : 'Seleccionar carrera'" [(visible)]="visible" [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '25vw' }" [draggable]="false" [resizable]="false" (onHide)="hideDialog()">
+              <p-messages [(value)]="note" [enableService]="false" />
+              
+              <form [formGroup]="form" (ngSubmit)="select()">
+                <div class="form-group">
+                  <label for="carrera" class="col-lg-4 col-form-label fw-bold fs-3">Carrera <i class="text-danger">*</i></label>
+                  <select class="form-control" formControlName="carrera" id="carrera" name="carrera">
+                    <option value="" disabled>Seleccione una carrera</option>
+                    <option value="TIDSM">TIDSM</option>
+                    <option value="MAMP">MAMP</option>
+                    <option value="MA">MA</option>
+                  </select>
+                </div>
+          
+                <br>
+          
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col">
+                      <button type="submit" class="btn btn-success mb-2 mb-md-0">Seleccionar</button>
+                      <button type="button" class="btn btn-danger ml-3 mb-2 mb-md-0" (click)="hideDialog()">Cancelar</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </p-dialog>
+          </div>
+
+          <!-- Modal Procesos -->
+<div [ngClass]="{'modal-blur': isModalOpenProcesos}">
+    <p-dialog [header]="'Seleccionar proceso'" [(visible)]="visibleProcesos" [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '25vw' }" [draggable]="false" [resizable]="false" (onHide)="hideDialogProcesos()">
+        <p-messages [(value)]="noteProcesos" [enableService]="false" />
+        
+        <form [formGroup]="form" (ngSubmit)="selectProcesos()">
+            <div class="form-group">
+                <label for="proceso" class="col-lg-4 col-form-label fw-bold fs-3">Proceso <i class="text-danger">*</i></label>
+                <select class="form-control" formControlName="proceso" id="proceso" name="proceso">
+                    <option value="" disabled>Seleccione un proceso</option>
+                    <option value="Proceso1">Oficial 30</option>
+                    <option value="Proceso2">Oficial 31</option>
+                    <option value="Proceso3">Oficial 32</option>
+                </select>
+            </div>
+      
+            <br>
+      
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <button type="submit" class="btn btn-success mb-2 mb-md-0">Seleccionar</button>
+                        <button type="button" class="btn btn-danger ml-3 mb-2 mb-md-0" (click)="hideDialogProcesos()">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </p-dialog>
+</div>
+

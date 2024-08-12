@@ -30,40 +30,30 @@
     transition: background-color 0.3s ease;
 }
 
-.btn-crear {
-    background-color: #28a745; /* Verde */
-}
-
-.btn-crear:hover {
-    background-color: #218838; /* Verde oscuro */
-}
-
-.btn-guardar {
-    background-color: #007bff; /* Azul */
-}
-
-.btn-guardar:hover {
-    background-color: #0056b3; /* Azul oscuro */
-}
-
-.btn-eliminar {
-    background-color: #dc3545; /* Rojo */
-}
-
-.btn-eliminar:hover {
-    background-color: #c82333; /* Rojo oscuro */
+.btn-crear{
+    background-color: #068a01;
+    color: #fff;
+    margin-top: 10px;
 }
 
 .btn-editar {
-    background-color: #ffc107; /* Amarillo */
-    color: #212529; /* Negro */
+    background-color: #f18c18;
+    color: #fff;
+    margin-top: 10px;
 }
 
-.btn-editar:hover {
-    background-color: #e0a800; /* Amarillo oscuro */
+.btn-eliminar {
+    background-color: #c4110b;
+    color: #fff;
+    margin-top: 10px;
 }
 
-/* Custom Media Queries for Responsiveness */
+.btn-habilitar{
+    background-color: #5a42f1;
+    color: #fff;
+    margin-top: 10px;
+}
+
 @media (max-width: 768px) {
     .calendario {
         width: 100%;

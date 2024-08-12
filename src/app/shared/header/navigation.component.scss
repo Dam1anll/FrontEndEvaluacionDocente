@@ -12,17 +12,17 @@
   .header {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
-    padding: 10px; /* Añade un poco de padding para mejorar el espaciado */
+    align-items: flex-start; 
+    padding: 10px;
   }
   
   .titulo {
-    font-size: 1.5rem; /* Aumenta el tamaño de la fuente del título */
-    font-weight: bold; /* Hace el título en negrita */
-    margin-bottom: 5px; /* Añade un margen inferior para separar del eslogan */
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
   }
   
   .eslogan {
-    font-size: 1rem; /* Ajusta el tamaño de la fuente del eslogan */
-    color: #555; /* Cambia el color del eslogan para diferenciarlo del título */
+    font-size: 1rem; 
+    color: #555; 
   }
