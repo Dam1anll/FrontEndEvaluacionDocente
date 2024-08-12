@@ -18,21 +18,21 @@ export const topcards: topcard[] = [
         bgcolor: 'primary',
         icon: 'bi bi-person',
         title: 'Resultados',
-        subtitle: 'Resultados',
+        subtitle: 'Evaluaciones',
         href: '/component/resultados'
     },
     {
         bgcolor: 'warning',
         icon: 'bi bi-thermometer-half',
         title: 'Gestion',
-        subtitle: 'Gestion',
+        subtitle: 'Procesos',
         href: '/component/gestion'
     },
     {
         bgcolor: 'info',
         icon: 'bi bi-bell-fill',
         title: 'Claves',
-        subtitle: 'Claves',
+        subtitle: 'Tutores',
         href: '/component/claves'
     }
 ] 

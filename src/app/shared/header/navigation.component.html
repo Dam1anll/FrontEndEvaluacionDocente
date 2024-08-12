@@ -4,47 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="navigation.component.scss">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   </head>
   <body>
-    <div class="navbar-nav float-start me-auto">
-  
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="navbar-nav mr-auto">
 
+        <div class="header">
+          <div class="titulo">Evaluación Docente</div>
+          <div class="eslogan">Educación de calidad que transforma!</div>
+        </div>
 
-      <!-- <li class="nav-item d-none d-md-block" ngbDropdown placement="bottom-end">
-        <a
-          ngbDropdownToggle
-          class="nav-link waves-effect waves-dark"
-          href="javascript:void(0)"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          <span>Acciones rápidas</span>
-        </a>
-        <div ngbDropdownMenu>
-          <a class="dropdown-item" href="#">Gestión de riesgos</a>
-          <a class="dropdown-item" href="#">Generar alerta de riesgo</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Control de calidad</a>
-        </div>
-      </li> -->
-      <span class="mx-4"> v{{ version }}</span>
-    </div>
-    
-    <div class="navbar-nav d-flex mx-4 justify-content-end ">
-      <li class="nav-item" placement="bottom-end">
-        <div class="ms-auto">
-          <img src="../../../assets/images/users/profile.png" alt="user" class="rounded-circle" width="31" />
-          <span class="ms-2" style="color: rgb(0, 0, 0);"> {{ auth.user.name }}  </span>
-        </div>
-    <!--     <div class="dropdown-menu-right" ngbDropdownMenu>
-          <a class="dropdown-item" href="javascript:void(0)"> My Profile</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="javascript:void(0)"> Account Setting</a>
-          <div class="dropdown-divider"></div> 
-          <a class="dropdown-item" href="/logout"> Cerrar sesión </a>
-        </div> -->
-      </li>
-    </div>
+        <span class="navbar-text mx-4">v{{ version }}</span>
+        <span class="navbar-text mx-4">{{ selectedComponentName }}</span> <!-- Mostrar el nombre del componente seleccionado -->
+      </div>
+      <div class="navbar-nav ml-auto">
+        <label>Miguel Alejandro Smoke</label>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="../../../assets/images/users/profile.png" alt="user" class="rounded-circle" width="31">
+            <span class="ml-2">{{ auth.user.name }}</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+            <a class="dropdown-item" href="#">My Profile</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Account Setting</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/logout">Cerrar sesión</a>
+          </div>
+        </li>
+      </div>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>

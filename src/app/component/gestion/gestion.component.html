@@ -3,80 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gestión de Procesos</title>
     <link rel="stylesheet" href="gestion.component.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="row">
-        <div class="col-12">
-            <!-- Page Breadcrumb -->
-            <div class="page-breadcrumb">
-                <div class="d-md-flex align-items-center">
-                    <h3 class="page-title">Gestión de Procesos</h3>
-                    <div class="ms-auto">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item" tabindex="0">
-                                    <a href="javascript:void(0)">Componente</a>
-                                </li>
-                                <li class="breadcrumb-item active">Gestión</li>
-                            </ol>
-                        </nav>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-12">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumb">
+                    <div class="d-md-flex align-items-center">
+                        <div class="ms-auto mb-0">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item" tabindex="0">
+                                        <a href="javascript:void(0)">Componente</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Gestión</li>
+                                </ol>
+                            </nav>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Card with Process Details -->
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Detalles del Proceso</h4>
-                    <hr>
-                    <form class="d-flex mb-3 mt-3">
-                        <!-- Calendar Input -->
-                        <div class="form-group">
-                            <label for="calendar">Duración del Proceso:</label>
-                            <p-calendar
-                                [(ngModel)]="date"
-                                [showIcon]="true"
-                                [inline]="true"
-                                inputId="calendar"
-                                selectionMode="range"
-                                [showButtonBar]="true"
-                                class="calendario">
-                            </p-calendar>
-                        </div>
+                <!-- Card with Process Details -->
+                <div class="card mt-0">
+                    <div class="card-body">
+                        <h4 class="card-title">Detalles del Proceso</h4>
+                        <hr>
+                        <form class="mb-3 mt-3">
+                            <div class="row">
+                                <!-- Calendar Input -->
+                                <div class="col-md-6 form-group">
+                                    <label for="calendar">Duración del Proceso:</label>
+                                    <p-calendar
+                                        [(ngModel)]="date"
+                                        [showIcon]="true"
+                                        [inline]="true"
+                                        inputId="calendar"
+                                        selectionMode="range"
+                                        [showButtonBar]="true"
+                                        class="calendario max-w-full">
+                                    </p-calendar>
+                                </div>
 
-                        <!-- Text Inputs -->
-                        <div class="d-flex flex-column mb-3 mt-3">
-                            <div class="form-group">
-                                <label for="process-name">Nombre del Proceso:</label>
-                                <input
-                                    type="text"
-                                    id="process-name"
-                                    placeholder="Oficial ## 20##"
-                                    class="form-control ng-untouched ng-pristine ng-valid"
-                                />
+                                <!-- Text Inputs -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="process-name">Nombre del Proceso:</label>
+                                        <input
+                                            type="text"
+                                            id="process-name"
+                                            placeholder="Oficial ## 20##"
+                                            class="form-control ng-untouched ng-pristine ng-valid"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="period">Periodo:</label>
+                                        <input
+                                            type="text"
+                                            id="period"
+                                            placeholder="Agosto - Diciembre"
+                                            readonly
+                                            class="form-control ng-untouched ng-pristine ng-valid"
+                                        />
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="period">Periodo:</label>
-                                <input
-                                    type="text"
-                                    id="period"
-                                    placeholder="Agosto - Diciembre"
-                                    readonly
-                                    class="form-control ng-untouched ng-pristine ng-valid"
-                                />
-                            </div>
-                            
+
                             <!-- Action Buttons -->
-                            <div class="d-flex mb-3 mt-3">
-                                <button class="btn btn-crear ms-auto">Crear</button>
-                                <button class="btn btn-guardar ms-3">Guardar</button>
-                                <button class="btn btn-eliminar ms-3">Eliminar</button>
-                                <button class="btn btn-editar ms-3">Editar</button>
+                            <div class="d-flex justify-content-end mt-3">
+                                <button class="btn btn-crear ms-2">Crear</button>
+                                <button class="btn btn-guardar ms-2">Guardar</button>
+                                <button class="btn btn-eliminar ms-2">Eliminar</button>
+                                <button class="btn btn-editar ms-2">Editar</button>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

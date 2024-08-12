@@ -1,4 +1,4 @@
-h3{
+h3 {
     text-align: center;
 }
 
@@ -8,15 +8,15 @@ h3{
     font-weight: bold;
 }
 
-.subtitulo{
+.subtitulo {
     text-align: center;
 }
 
-p{
+p {
     text-align: center;
 }
 
-button{
+button {
     margin-bottom: 30px;
 }
 
@@ -25,31 +25,45 @@ button{
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .card-item {
     margin: 10px;
 }
 
-.btn-descargar{
+.btn-descargar {
     background-color: #FF6624;
     color: #fff;
+    margin-top: 10px;
 }
 
-.btn-compartir{
+.btn-compartir {
     background-color: #0C59CF;
     color: #fff;
+    margin-top: 10px;
 }
 
-.btn-actualizar{
+.btn-actualizar {
     background-color: #FEC63D;
     color: #fff;
+    margin-top: 10px;
 }
 
-.btn-procesos{
+.btn-procesos {
     background-color: gray;
     color: #fff;
+    margin-top: 10px;
 }
 
-.btn-carrera{
+.btn-carrera {
     background-color: #705CEE;
     color: #fff;
+    margin-top: 10px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .d-flex.flex-wrap .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }

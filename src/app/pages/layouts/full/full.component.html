@@ -4,7 +4,7 @@
   <!-- ============================================================== -->
   <header class="topbar" data-navbarbg="skin1">
     <nav class="d-flex top-navbar navbar-expand-lg navbar-dark">
-      <div class="navbar-header" [ngClass]="expandLogo ? 'expand-logo' : ''" data-logobg="skin6" style="background-color: #ffffff;">
+      <div class="navbar-header" [ngClass]="expandLogo ? 'expand-logo' : ''" data-logobg="skin6" style="background-color: #202123;">
         <!-- This is for the sidebar toggle which is visible on mobile only -->
         <a (click)="showMobileMenu = !showMobileMenu" class="nav-toggler waves-effect waves-light d-block d-lg-none"
           href="javascript:void(0)">
@@ -43,7 +43,6 @@
     <app-sidebar (click)="onSidebarClick($event)"></app-sidebar>
   </aside>
 
-
   <!-- ============================================================== -->
   <!-- End Left Sidebar - style you can find in sidebar.scss  -->
   <!-- ============================================================== -->
@@ -56,6 +55,7 @@
     </div>
 
     <footer class="footer text-center">
+      <hr>
       Todos los derechos reservados &reg; {{ year }} Evaluación Docente. Creado por <a href="https://www.ltsoluciones.com.mx/" target="_blank">LT Soluciones Tecnológicas, S.A.S. de C.V.</a>
     </footer>
   </div>

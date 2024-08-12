@@ -1,5 +1,5 @@
 .menuleft {
-    color: black !important;
+    color: white !important;
     font-weight: 600;
     cursor: pointer;
     &:hover {
@@ -7,10 +7,24 @@
     }
   }
   
+  hr{
+    background-color: white;
+  }
+
   .sidebar-item.active > a,
   .sidebar-item.active > a:hover,
   .submenu .sidebar-item.active > a,
   .submenu .sidebar-item.active > a:hover,
   .menuleft.active {
     color: white !important;
+  }
+
+  .sidebar-nav {
+    background-color: #202123; /* Cambia el color de fondo de la barra lateral a rojo */
+    height: 100vh; /* Hace que la barra lateral ocupe toda la altura de la ventana */
+    overflow-y: auto; /* Permite el desplazamiento si el contenido es más alto que la ventana */
+  }
+
+  .upgrade-btn{
+    margin-top: 170px;
   }

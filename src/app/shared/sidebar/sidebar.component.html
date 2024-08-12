@@ -8,7 +8,8 @@
   </head>
   <body>
     <nav class="sidebar-nav">
-      <ul id="sidebarnav" class="p-3 menuleft">
+      <ul id="sidebarnav" class="p-3 menuleft sidebar-content">
+        <hr>
         <li class="sidebar-item" *ngFor="let sidebarnavItem of sidebarnavItems" [class.active]="showMenu === sidebarnavItem.title || isSubmenuActive(sidebarnavItem)">
           <div class="nav-small-cap" *ngIf="sidebarnavItem.extralink === true && sidebarnavItem.role">{{sidebarnavItem.title}}</div>
           <ng-container *ngIf="sidebarnavItem.path !== ''; else noPath">
@@ -26,8 +27,7 @@
           <ng-template #noPath>
             <a 
               class="sidebar-link waves-effect waves-dark menuleft" 
-              (click)="toggleSubmenu(sidebarnavItem.title)" 
-            >
+              (click)="toggleSubmenu(sidebarnavItem.title)">
               <i [ngClass]="[sidebarnavItem.icon]"></i>
               <span class="hide-menu">{{sidebarnavItem.title}}</span>
               <i *ngIf="sidebarnavItem.submenu.length > 0" class="bi bi-chevron-down"></i> 
@@ -48,11 +48,10 @@
         </li>
     
         <hr>
-        
-        <li class="text-center p-3 upgrade-btn">
-          <a href="/logout" class="btn d-block w-100 p-2 btn-danger"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</a>
-        </li>
       </ul>
+      <li class="text-center p-3 upgrade-btn">
+        <a href="/logout" class="btn d-block w-100 p-2 btn-danger"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</a>
+      </li>
     </nav>
   </body>
 </html>

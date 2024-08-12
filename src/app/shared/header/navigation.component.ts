@@ -1,8 +1,7 @@
-import { Component, AfterViewInit, EventEmitter, Output } from '@angular/core';
+import { Component, AfterViewInit, EventEmitter, Output, Input } from '@angular/core';
 import { NgbDropdownModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AuthService } from 'src/app/services/auth.service';
 import { VersionService } from '../../services/version.service';
-
 
 declare var $: any;
 
@@ -10,12 +9,13 @@ declare var $: any;
   selector: 'app-navigation',
   standalone: true,
   imports:[NgbDropdownModule],
-  templateUrl: './navigation.component.html'
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.scss'] 
 })
 export class NavigationComponent implements AfterViewInit {
   @Output() toggleSidebar = new EventEmitter<void>();
+  @Input() selectedComponentName: string = ''; // Nuevo Input
   version: string | undefined;
-
 
   public showSearch = false;
 

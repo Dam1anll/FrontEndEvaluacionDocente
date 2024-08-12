@@ -5,6 +5,7 @@ $sidebar-first-level-padding: 0 0 10px 0;
 $sidebar-first-level-link-padding: 10px 15px;
 $sidebar-first-level-icon-size: 14px;
 $sidebar-custom-color: #0c9883;
+$sidebar: #202123;
 
 /*******************
 Main sidebar
@@ -19,6 +20,7 @@ Main sidebar
   padding-top: 64px;
   background: $sidebar;
   box-shadow: $shadow;
+  background: #202123;
   transition: 0.2s ease-in;
   overflow-y: auto; /* Permite el scroll vertical */
 

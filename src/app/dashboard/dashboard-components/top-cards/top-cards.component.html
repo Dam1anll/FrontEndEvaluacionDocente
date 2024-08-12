@@ -1,32 +1,52 @@
-<div class="row">
-    <div class="col-12">
-        <div class="page-breadcrumb">
-            <div class="d-md-flex align-items-center">
-                <h3 class="page-title">Inicio</h3>
-                <div class="ms-auto">
-                    <nav aria-label="breadcrumb">
-                    </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="top-cards.component.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="page-breadcrumb">
+                    <div class="d-md-flex align-items-center">
+                        <div class="ml-auto mb-0">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item" tabindex="0"><a href="javascript:void(0)">Componente</a></li>
+                                    <li class="breadcrumb-item active">Inicio</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-0">
+            <div class="col-md-6 col-lg-3 card-item" *ngFor='let topcard of topcards'>
+                <div class="card shadow">
+                    <div class="card-body">
+                        <a routerLink="{{topcard.href}}">
+                            <div class="d-flex align-items-center">
+                                <div
+                                    class="btn btn-lg rounded-circle round round-lg fs-6 d-flex align-items-center justify-content-center bg-light-{{topcard.bgcolor}} text-{{topcard.bgcolor}}">
+                                    <i class={{topcard.icon}}></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h3 class="mb-0 font-weight-bold titulo">{{topcard.title}}</h3>
+                                    <small class="text-muted fs-3 subtitulo">{{topcard.subtitle}}</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <div class="col-md-6 col-lg-3" *ngFor='let topcard of topcards'>
-        <div class="card shadow">
-                <div class="card-body">
-                    <a routerLink="{{topcard.href}}">
-                        <div class="d-flex align-items-center">
-                            <div
-                                class="btn btn-lg rounded-circle round round-lg fs-6 d-flex align-items-center justify-content-center bg-light-{{topcard.bgcolor}} text-{{topcard.bgcolor}}">
-                                <i class={{topcard.icon}}></i>
-                            </div>
-                            <div class="ms-3">
-                                <h3 class="mb-0 font-weight-bold">{{topcard.title}}</h3>
-                                <small class="text-muted fs-3">{{topcard.subtitle}}</small>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-        </div>
-    </div>
-</div>
+</body>
+</html>

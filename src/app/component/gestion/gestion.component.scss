@@ -4,9 +4,9 @@
     margin-bottom: 1rem;
 }
 
-.calendario{
-    width: 30rem;
-    height: 30rem;
+.calendario {
+    width: 100%;
+    height: auto;
 }
 
 .form-group label {
@@ -61,4 +61,21 @@
 
 .btn-editar:hover {
     background-color: #e0a800; /* Amarillo oscuro */
+}
+
+/* Custom Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .calendario {
+        width: 100%;
+        height: auto;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
 }
