@@ -2,6 +2,11 @@ h3 {
     text-align: center;
 }
 
+.scrollable-container {
+    max-height: 400px; /* Ajusta la altura máxima según tus necesidades */
+    overflow-y: auto;
+  }
+
 .titulo {
     text-align: center;
     font-size: 15px;
@@ -35,7 +40,6 @@ button {
     color: #fff;
     margin-top: 10px;
 }
-
 .btn-compartir {
     background-color: #0C59CF;
     color: #fff;

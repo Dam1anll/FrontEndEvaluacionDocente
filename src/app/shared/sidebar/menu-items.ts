@@ -1,15 +1,15 @@
 import { RouteInfo } from './sidebar.metadata';
 
 export const ROUTES: RouteInfo[] = [
-  {
-    path: '/inicio',
-    title: 'Inicio',
-    icon: 'bi bi-house',
-    // role: ['ADMIN'],
-    class: '',
-    extralink: false,
-    submenu: []
-  },
+  // {
+  //   path: '/inicio',
+  //   title: 'Inicio',
+  //   icon: 'bi bi-house',
+  //   // role: ['ADMIN'],
+  //   class: '',
+  //   extralink: false,
+  //   submenu: []
+  // },
   // {
   //   path: '/component/users',
   //   title: 'Usuarios',
@@ -19,15 +19,15 @@ export const ROUTES: RouteInfo[] = [
   //   extralink: false,
   //   submenu: []
   // },
-  // {
-  //   path: '/component/inicio',
-  //   title: 'Inicio',
-  //   icon: 'bi bi-house',
-  //   // role: ['ADMIN'],
-  //   class: '',
-  //   extralink: false,
-  //   submenu: []
-  // },
+   {
+     path: '/component/inicio',
+     title: 'Inicio',
+     icon: 'bi bi-house',
+     // role: ['ADMIN'],
+     class: '',
+     extralink: false,
+     submenu: []
+   },
   {
     path: '/component/estatus',
     title: 'Estatus',

@@ -4,6 +4,11 @@
     margin-bottom: 1rem;
 }
 
+.scrollable-container {
+    max-height: 400px; /* Ajusta la altura máxima según tus necesidades */
+    overflow-y: auto;
+  }
+
 .calendario {
     width: 100%;
     height: auto;
